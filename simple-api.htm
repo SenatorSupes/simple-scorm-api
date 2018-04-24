@@ -67,7 +67,7 @@
 	this.skipManifestCheck = false;
 
 	// The SCO's *default* launch file
-	this.launchFile = 'default.htm';
+	this.launchFile = 'scormdriver/indexAPI.html';
 
 	// The *default* name of the cookie to be used within this session
 	this.cookieName = 'SimpleAPI_Data_'+_VERSION;
@@ -2226,7 +2226,7 @@ function LMSSetValueMethod(element, value){
 						setString = "this." + element + ".cmivalue =\"" + pre + value + "\";";
 					}
 					else{
-						setString = "this." + element + ".cmivalue =\"" + value + "\";";
+						setString = "this." + element + ".cmivalue = '" + value + "';";
 					}
 					var result = eval(setString);
 					this.ServerSco.lastError = "0";
